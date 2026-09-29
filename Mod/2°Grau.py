@@ -21,6 +21,10 @@ def bhaskara():
       print('O valor de X2 é: ', X2)
 
 def main():
+   global A, B, C
+   A = float(input('Digite o valor de A: '))
+   B = float(input('Digite o valor de B: '))
+   C = float(input('Digite o valor de C: '))
    bhaskara()
 
 if __name__ == '__main__':

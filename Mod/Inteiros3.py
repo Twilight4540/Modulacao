@@ -4,8 +4,6 @@ N2: int = 0
 #Inicio
 def inteiros3():
     global N1, N2
-    N1 = int(input('Digite o 1° número: '))
-    N2 = int(input('Digite o 2° número: '))
     if N1 == N2:
         print('Os números são iguais')
     else:
@@ -21,6 +19,9 @@ def inteiros3():
                 print('O número', N2, 'não é múltiplo de ', N1)
 
 def main():
+    global N1, N2
+    N1 = int(input('Digite o 1° número: '))
+    N2 = int(input('Digite o 2° número: '))
     inteiros3()
 
 if __name__ == '__main__':

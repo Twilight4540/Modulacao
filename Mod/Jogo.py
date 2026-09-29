@@ -11,10 +11,6 @@ M: int = 0
 
 def jogo():
     global HI, MI, HF, MF, I, F, D, H, M
-    HI = int(input('Digite a hora inicial: '))
-    MI = int(input('Digite o minuto inicial: '))
-    HF = int(input('Digite a hora final: '))
-    MF = int(input('Digite o minuto final: '))
     if HI >= 24 or HI < 0 or HF >= 24 or HF < 0 or MI >= 60 or MI < 0 or MF >= 60 or MF < 0:
         print('Hora ou minuto inválido')
     else:
@@ -25,9 +21,17 @@ def jogo():
         D = F - I
         H = int(D / 60)
         M = D - (H * 60)
-        print('O jogo durou: ', H,':', M)
+        if M != 0:
+            print('O jogo durou: ', H,':', M)
+        else:
+            print('O jogo durou: ', H,':', M, 0)
 
 def main():
+    global HI, MI, HF, MF
+    HI = int(input('Digite a hora inicial: '))
+    MI = int(input('Digite o minuto inicial: '))
+    HF = int(input('Digite a hora final: '))
+    MF = int(input('Digite o minuto final: '))
     jogo()
 
 if __name__ == '__main__':
